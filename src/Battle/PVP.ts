@@ -10,7 +10,7 @@ class PVP extends Battle {
     Character1: Character | Fighter,
     Character2: Character | Fighter,
   ) {
-    super(Character2);
+    super(Character1);
 
     this._Character1 = Character1;
     this._Character2 = Character2;
@@ -21,7 +21,7 @@ class PVP extends Battle {
       this._Character1.attack(this._Character2);
       this._Character2.attack(this._Character1);
     }
-    return this._Character1.lifePoints === -1 ? -1 : 1;
+    return super.fight();
   }
 }
 
